@@ -1,0 +1,86 @@
+/**********************************************************************************************************
+
+███████╗██╗  ██╗ █████╗  ██████╗ ██╗  ██╗    ██████╗██╗  ██╗    ███████╗████████╗██╗   ██╗██╗     ███████╗
+╚══███╔╝██║  ██║██╔══██╗██╔═══██╗╚██╗██╔╝   ██╔════╝██║  ██║    ██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
+  ███╔╝ ███████║███████║██║   ██║ ╚███╔╝    ██║     ███████║    ███████╗   ██║    ╚████╔╝ ██║     █████╗
+ ███╔╝  ██╔══██║██╔══██║██║   ██║ ██╔██╗    ██║     ██╔══██║    ╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝
+███████╗██║  ██║██║  ██║╚██████╔╝██╔╝ ██╗██╗╚██████╗██║  ██║    ███████║   ██║      ██║   ███████╗███████╗
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+
+***********************************************************************************************************/
+
+html {
+  overflow-y:auto; /* hidde scrollbar */
+  background: #161823;  /* 漆黑 */
+  color: #d6ecf0; /* 月白 */
+  font-size: 16px;
+}
+html, body {
+  height:100%;
+  width:100%;
+}
+body {
+  display:table;
+  margin:0;
+  line-height:1.5;
+  font-family: monospace;
+}
+
+/* section & footer */
+section, footer {
+  display:table-row;
+}
+section {
+  height:95%;
+}
+footer {
+  height:5%;
+}
+
+/* center */
+.center {
+  display:table-cell;
+  text-align:center;
+  vertical-align:middle;
+}
+
+/* title & content */
+.title {
+  color: #d6ecf0; /* 月白 */
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.content {
+  color: #c0d4d8;
+}
+
+/* hyperlink */
+a {
+  color: #ffd400;
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  text-decoration:none;
+}
+a:hover {
+  color: #fcf16e;
+}
+
+/* menu */
+a.menu {
+  color: #c2ccd0; /* 花白 */
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  text-decoration:none;
+}
+a.menu:hover {
+  color:#00ff99;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  .mobile {
+    font-size: 3.7vw;
+  }
+}
