@@ -9,76 +9,70 @@
 
 ***********************************************************************************************************/
 
+:root {
+  --background: #161823; /* 漆黑 */
+  --title: #d6ecf0; /* 月白 */
+  --content: #c2ccd0; /* 花白 */
+  --link: #c0c4c3; /* 月影白 */
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f7f7f7;
+    --title: #1f1f1f;
+    --content: #1f1f1f;
+    --link: #3a3a3a;
+  }
+}
+
+/* main structure */
+html, body {
+  height: 100%;
+  width: 100%;
+}
 html {
-  overflow-y:auto; /* hidde scrollbar */
-  background: #161823;  /* 漆黑 */
-  color: #d6ecf0; /* 月白 */
+  overflow-y: auto; /* hidde scrollbar */
+  background: var(--background);
+  color: var(--title);
   font-size: 16px;
 }
-html, body {
-  height:100%;
-  width:100%;
-}
 body {
-  display:table;
-  margin:0;
-  line-height:1.5;
+  display: table;
+  margin: 0;
+  line-height: 1.7;
   font-family: monospace;
 }
+section, footer { display: table-row; }
+section { height: 95%; }
+footer { height: 5%; }
 
-/* section & footer */
-section, footer {
-  display:table-row;
-}
-section {
-  height:95%;
-}
-footer {
-  height:5%;
-}
-
-/* center */
+/* content */
 .center {
-  display:table-cell;
-  text-align:center;
-  vertical-align:middle;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
-
-/* title & content */
 .title {
-  color: #d6ecf0; /* 月白 */
+  color: var(--title);
   font-size: 1.8em;
   font-weight: 600;
 }
 .content {
-  color: #c0d4d8;
+  color: var(--content);
 }
 
 /* hyperlink */
 a {
-  color: #ffd400;
-  transition-property: color;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  text-decoration:none;
+  color: var(--link);
 }
 a:hover {
-  color: #fcf16e;
+  background: var(--link);
+  color: var(--background);
 }
-
-/* menu */
 a.menu {
-  color: #c2ccd0; /* 花白 */
-  transition-property: color;
-  transition-duration: 0.5s;
-  transition-timing-function: linear;
   text-decoration:none;
 }
-a.menu:hover {
-  color:#00ff99;
-}
 
-/* mobile */
+/* responsive */
 @media screen and (max-width: 768px) {
   .mobile {
     font-size: 3.7vw;
